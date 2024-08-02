@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- linking the font-awesome site  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- linking google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- linking our own css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- wrapper div -->
+    <div class="wrapper">
+      <!-- main password-container -->
+      <div class="password-container">
+        <h1 class="main-heading">PASSWORD GENERATOR</h1>
+        <!-- password display block  -->
+        <div class="password-display">
+          <input type="text" readonly passwordDisplayBlock />
+          <div class="copy-content-block">
+            <span copiedORfailed></span>
+            <!-- adding copy waala icon -->
+            <button>
+              <i class="fa-solid fa-copy" copyPasswordBtn></i>
+            </button>
+          </div>
+        </div>
+        <!-- password display block finished  -->
+        <div class="password-setup">
+          <!-- password length block starts -->
+          <div class="password-length">
+            <p>Password Length</p>
+            <p class="password-length-number" password-length-number></p>
+          </div>
+          <!-- password length block ends  -->
+          <!-- slider block starts  -->
+          <div class="slider-block">
+            <input type="range" min="1" max="15" range-controller />
+          </div>
+          <!-- slider block ends  -->
+          <!-- checkbox-blocks starts -->
+          <div class="checkbox-block">
+            <div class="uppercase-block">
+              <input type="checkbox" id="uppercase" />
+              <label for="uppercase">Include uppercase letters</label>
+            </div>
+            <div class="uppercase-block">
+              <input type="checkbox" id="lowercase" />
+              <label for="lowercase">Include lowercase letters</label>
+            </div>
+            <div class="uppercase-block">
+              <input type="checkbox" id="number-digits" />
+              <label for="number-digits">Include Numbers</label>
+            </div>
+            <div class="uppercase-block">
+              <input type="checkbox" id="symbols" />
+              <label for="symbols">Include Symbols</label>
+            </div>
+          </div>
+          <!-- checkbox-blocks ends -->
+          <!-- strength block starts  -->
+          <div class="strength-block">
+            <p>STRENGTH</p>
+            <div class="strength-circle"></div>
+          </div>
+          <!-- strength block ends  -->
+          <!-- generate-password block starts -->
+          <div class="generate-password-block">
+            <button generate-password-btn>GENERATE PASSWORD</button>
+          </div>
+          <!-- generate-password block ends -->
+        </div>
+      </div>
+    </div>
+    <!-- linking the script here :- -->
+    <script src="./script.js"></script>
+  </body>
+</html>
